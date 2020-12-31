@@ -1,15 +1,15 @@
-document.querySelectorAll('accordion-item__trigger').forEach((item) =>
+document.querySelectorAll('.accordion-item__trigger').forEach((item) =>
     item.addEventListener('click', () => {
-        const parrent = item.parrentNode;
+        const parent = item.parentNode;
 
-        if (parrent.classlist.contains('accordion-item--active')) {
-            parrent.classlist.remove('accordion-item--active');
+        if (parent.classList.contains('accordion-item--active')) {
+            parent.classList.remove('accordion-item--active');
         } else {
             document
                 .querySelectorAll('.accordion-item')
                 .forEach((child) => child.classList.remove('accordion-item--active'))
 
-            parrent.classlist.toggle('accordion-item--active');
+            parent.classList.add('accordion-item--active');
         }
     })
 )
